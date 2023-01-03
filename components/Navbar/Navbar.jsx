@@ -12,7 +12,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import {
@@ -53,7 +52,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} className='items-center'>
-          <Image src={'/memoji.jpg'} width={50} height={50} />
+          <Image src={'/memoji.jpg'} width={50} height={50} alt='memoji' />
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -103,18 +102,7 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}>
-                {navItem.label}
-              </Link>
+              <Text>{navItem.label}</Text>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -193,7 +181,6 @@ const MobileNavItem = ({ label, children, href }) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
         py={2}
-        as={Link}
         href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
@@ -235,13 +222,6 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
-
-// interface NavItem {
-//   label: string;
-//   subLabel?: string;
-//   children?: Array<NavItem>;
-//   href?: string;
-// }
 
 const NAV_ITEMS = [
   {
