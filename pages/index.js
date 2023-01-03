@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import Map from '../components/Map'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Map from '../components/Map/Index'
+import Navbar from '../components/Navbar/Index'
+import Footer from '../components/Footer/Index'
 
 const inter = Inter({ subsets: ['latin'] })
 
