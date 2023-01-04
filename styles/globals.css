@@ -5,3 +5,9 @@
 body,html{
     scrollbar-width: none;
 }
+
+@media (max-width: 768px) {
+    .memoji-img{
+        display: none;
+    }
+}

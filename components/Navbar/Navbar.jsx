@@ -52,8 +52,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} className='items-center'>
-          <Image src={'/memoji.jpg'} width={50} height={50} alt='memoji' />
-
+          <Image src={'/memoji.jpg'} width={50} height={50} alt='memoji' className='memoji-img' />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
